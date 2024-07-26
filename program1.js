@@ -13,7 +13,7 @@ function getTotalIsles(grid) {
       grid[row][col] = 'W'; // Mark as visited
 
       // Check all adjacent cells
-      dfs(row - 1, col); // Up
+      describe(row - 1, col); // Up
       dfs(row + 1, col); // Down
       dfs(row, col - 1); // Left
       dfs(row, col + 1); // Right
