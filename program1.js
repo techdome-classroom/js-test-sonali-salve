@@ -1,25 +1,34 @@
 function getTotalIsles(grid) {
   if (!grid || grid.length === 0) return 0;
 
-  const rows = grid.length;
-  const cols = grid[0].length;
-  const visited = Array.from({ length: rows }, () => Array(cols).fill(false));
+  const numRows = grid.length;
+  const numCols = grid[0].length;
+  let count = 0;
 
-  const directions = [
-      [0, 1],  
-      [1, 0], 
-      [0, -1], 
-      [-1, 0]  
-  ];
+  function dfs(row, col) {
+      if (row < 0 || col < 0 || row >= numRows || col >= numCols || grid[row][col] === 'W') {
+          return;
+      }
 
-  function (row, col) {
-      
-      visited[row][col] = true;
+      grid[row][col] = 'W'; // Mark as visited
 
-      
-      for (const [dr, dc] of directions) {
-          const newRow = row + dr;
-          const newCol = col + dc;
-          
-          if (
-              newRow >= 0 && newRow <
+      // Check all adjacent cells
+      dfs(row - 1, col); // Up
+      dfs(row + 1, col); // Down
+      dfs(row, col - 1); // Left
+      dfs(row, col + 1); // Right
+  }
+
+  for (let row = 0; row < numRows; row++) {
+      for (let col = 0; col < numCols; col++) {
+          if (grid[row][col] === 'L') {
+              count++;
+              dfs(row, col);
+          }
+      }
+  }
+
+  return count;
+}
+
+module.exports = getTotalIsles;
