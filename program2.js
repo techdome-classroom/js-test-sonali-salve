@@ -1,4 +1,4 @@
-const decodeTheRing = function (s, p) {
+const decodeTheRing = function (s, p) 
 
   function decodeTheRing(input, pattern) {
     let i = 0, j = 0;
