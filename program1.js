@@ -12,7 +12,7 @@ function getTotalIsles(grid) {
       [-1, 0]  
   ];
 
-  function dfs(row, col) {
+  function (row, col) {
       
       visited[row][col] = true;
 
