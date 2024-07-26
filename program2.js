@@ -1,4 +1,6 @@
-const decodeTheRing = function (s, p)  {
+const decodeTheRing = function (s, p) {
+
+  function decodeTheRing(input, pattern) {
     let i = 0, j = 0;
 
     while (i < input.length && j < pattern.length) {
@@ -23,4 +25,6 @@ const decodeTheRing = function (s, p)  {
 module.exports = decodeTheRing;
 
 
+  };
   
+  module.exports = decodeTheRing;
