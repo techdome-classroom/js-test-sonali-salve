@@ -1,6 +1,6 @@
 const getTotalIsles = function (grid) {
 
-  const 
+  const total
   
 
 
