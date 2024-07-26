@@ -10,13 +10,13 @@ function getTotalIsles(grid) {
           return;
       }
 
-      grid[row][col] = 'W'; // Mark as visited
+      grid[row][col] = 'W';
 
-      // Check all adjacent cells
-      describe(row - 1, col); // Up
-      describe(row + 1, col); // Down
-      describe(row, col - 1); // Left
-      describe(row, col + 1); // Right
+  
+      describe(row - 1, col); 
+      describe(row + 1, col); 
+      describe(row, col - 1); 
+      describe(row, col + 1); 
   }
 
   for (let row = 0; row < numRows; row++) {
