@@ -23,7 +23,7 @@ function getTotalIsles(grid) {
       for (let col = 0; col < numCols; col++) {
           if (grid[row][col] === 'L') {
               count++;
-              dfs(row, col);
+              describe(row, col);
           }
       }
   }
