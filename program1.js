@@ -10,7 +10,7 @@ function getTotalIsles(grid) {
           return;
       }
 
-      grid[row][col] = 
+      grid[row][col] = "w";
   }
 
   for (let row = 0; row < numRows; row++) {
