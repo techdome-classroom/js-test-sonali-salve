@@ -2,8 +2,9 @@ const getTotalIsles = function (grid,x,y,i,j,v) {
 
   const row =grid.length;
   const cols =grid[0];
-  for (i<0; )
-  
+  if (i < 0 || i >= rows || j < 0 || j >= cols || grid[i][j] <= 0) {
+    return;
+  }
 
 
 };
