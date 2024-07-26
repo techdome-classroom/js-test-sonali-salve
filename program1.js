@@ -16,7 +16,7 @@ function getTotalIsles(grid) {
       
       visited[row][col] = true;
 
-      // Explore all 4 directions
+      
       for (const [dr, dc] of directions) {
           const newRow = row + dr;
           const newCol = col + dc;
