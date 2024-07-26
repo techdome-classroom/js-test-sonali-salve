@@ -13,7 +13,7 @@ function getTotalIsles(grid) {
   ];
 
   function dfs(row, col) {
-      // Mark this cell as visited
+      
       visited[row][col] = true;
 
       // Explore all 4 directions
