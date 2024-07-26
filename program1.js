@@ -15,8 +15,8 @@ function getTotalIsles(grid) {
       // Check all adjacent cells
       describe(row - 1, col); // Up
       describe(row + 1, col); // Down
-      dfs(row, col - 1); // Left
-      dfs(row, col + 1); // Right
+      describe(row, col - 1); // Left
+      describe(row, col + 1); // Right
   }
 
   for (let row = 0; row < numRows; row++) {
